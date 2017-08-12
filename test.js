@@ -6,7 +6,7 @@ import keyChain from "@unction/keychain"
 import key from "@unction/key"
 import mapValues from "@unction/mapvalues"
 
-import mergeWith from "./source"
+import nestedApply from "./source"
 
 test(({similar, end}) => {
   similar(
