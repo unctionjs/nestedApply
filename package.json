@@ -43,16 +43,16 @@
     "eslint-plugin-promise": "3.5.0",
     "flow": "0.2.3",
     "flow-bin": "0.51.1",
-    "flow-typed": "2.1.3",
-    "tap": "10.3.3",
-    "@unction/mapvalues": "^2.0.3",
+    "flow-typed": "2.1.5",
+    "tap": "10.3.4",
+    "@unction/mapvalues": "2.0.4",
     "ramda": "0.24.1"
   },
   "dependencies": {
-    "@unction/ispopulated": "^2.0.4",
-    "@unction/key": "^1.0.0",
-    "@unction/keychain": "^1.0.0",
-    "@unction/reducevalues": "^1.0.8",
-    "@unction/upto": "^2.0.4"
+    "@unction/ispopulated": "2.0.5",
+    "@unction/key": "1.0.1",
+    "@unction/keychain": "1.0.1",
+    "@unction/reducevalues": "1.0.9",
+    "@unction/upto": "2.0.5"
   }
 }
