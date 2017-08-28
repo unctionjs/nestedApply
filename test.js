@@ -6,7 +6,7 @@ import keyChain from "@unction/keychain"
 import key from "@unction/key"
 import mapValues from "@unction/mapvalues"
 
-import nestedApply from "./source"
+import nestedApply from "./"
 
 test(({similar, end}) => {
   similar(
@@ -92,17 +92,17 @@ test(({similar, end}) => {
   similar(
     nestedApply(mapValues)(groupBy(keyChain(["attributes", "version"])))(1)(
       {
-        resources: {
+        res: {
           accounts: [{
             id: "a1",
-            type: "resources",
+            type: "res",
             attributes: {
               version: "v1",
               namespace: "accounts",
             },
           }, {
             id: "a2",
-            type: "resources",
+            type: "res",
             attributes: {
               version: "v1",
               namespace: "accounts",
@@ -110,14 +110,14 @@ test(({similar, end}) => {
           }],
           profiles: [{
             id: "b1",
-            type: "resources",
+            type: "res",
             attributes: {
               version: "v1",
               namespace: "profiles",
             },
           }, {
             id: "b1",
-            type: "resources",
+            type: "res",
             attributes: {
               version: "v2",
               namespace: "profiles",
@@ -127,12 +127,12 @@ test(({similar, end}) => {
       }
     ),
     {
-      resources: {
+      res: {
         accounts: {
           v1: [
             {
               id: "a1",
-              type: "resources",
+              type: "res",
               attributes: {
                 version: "v1",
                 namespace: "accounts",
@@ -140,7 +140,7 @@ test(({similar, end}) => {
             },
             {
               id: "a2",
-              type: "resources",
+              type: "res",
               attributes: {
                 version: "v1",
                 namespace: "accounts",
@@ -152,7 +152,7 @@ test(({similar, end}) => {
           v1: [
             {
               id: "b1",
-              type: "resources",
+              type: "res",
               attributes: {
                 version: "v1",
                 namespace: "profiles",
@@ -162,7 +162,7 @@ test(({similar, end}) => {
           v2: [
             {
               id: "b1",
-              type: "resources",
+              type: "res",
               attributes: {
                 version: "v2",
                 namespace: "profiles",
