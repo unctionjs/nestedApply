@@ -53,8 +53,8 @@
     "tap": "10.3.4"
   },
   "dependencies": {
-    "@unction/ispopulated": "3.0.0",
-    "@unction/key": "2.0.0",
+    "@unction/ispopulated": "4.0.0",
+    "@unction/key": "3.0.0",
     "@unction/keychain": "2.0.0",
     "@unction/reducevalues": "2.2.0",
     "@unction/upto": "3.0.0"
