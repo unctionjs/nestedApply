@@ -54,7 +54,7 @@
   "dependencies": {
     "@unction/ispopulated": "4.48.0",
     "@unction/key": "4.11.0",
-    "@unction/keychain": "2.43.0",
+    "@unction/keychain": "2.44.0",
     "@unction/reducevalues": "2.44.0",
     "@unction/upto": "3.8.0"
   },
