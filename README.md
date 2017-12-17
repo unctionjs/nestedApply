@@ -1,14 +1,13 @@
 # @unction/nestedApply
 
-
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
+> (MapFunctionType => FunctorType => FunctorType) => MapFunctionType => number => FunctorType => FunctorType
 
 Takes a function (the application) that takes function(s) (later referred to as
-the inner) and value(s) (`map()`, `forEach()`, `find()`), a function (the inner)
+the inner) and value(s) (`mapValues()`, `forEach()`, `selectValues()`), a function (the inner)
 that will be applied to a value(s), and finally a number (depth) to apply that
 applicator around the inner.
 
@@ -75,6 +74,5 @@ And the result:
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/nestedApply.svg?maxAge=2592000&style=flat-square
-
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/nestedApply.svg?maxAge=2592000&style=flat-square

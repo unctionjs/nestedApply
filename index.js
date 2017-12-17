@@ -1,29 +1,23 @@
 import reduceValues from "@unction/reducevalues"
 import upTo from "@unction/upto"
-import isPopulated from "@unction/ispopulated"
 
-export default function nestedApply (iterator: (any => any) => FunctorType => FunctorType): Function {
-  return function nestedApplyIterator (unction: any => any): Function {
-    const initial = iterator(unction)
+import type {UnaryFunctionType} from "types"
+import type {MapFunctionType} from "types"
 
-    return function nestedApplyIteratorUnction (depth: number): Function {
-      const times = upTo(depth)
+type IteratorFunctionType = MapFunctionType => FunctorType => FunctorType;
 
-      if (isPopulated) {
-        return reduceValues(
-          function nestedApplyIteratorUnctionDepthIterable (accumulatedUnction: Function): Function {
-            return function nestedApplyIteratorUnctionDepthIterableAccumulatedUnction (): FunctorType => FunctorType {
-              return iterator(accumulatedUnction)
-            }
-          }
-        )(
-          initial
-        )(
-          times
-        )
-      }
-
-      return unction
+export default function nestedApply (iterator: IteratorFunctionType): UnaryFunctionType {
+  return function nestedApplyIterator (unction: MapFunctionType): UnaryFunctionType {
+    return function nestedApplyIteratorUnction (depth: number): UnaryFunctionType {
+      return reduceValues(
+        (accumulatedUnction: IteratorFunctionType): UnaryFunctionType =>
+          (): IteratorFunctionType =>
+            iterator(accumulatedUnction)
+      )(
+        iterator(unction)
+      )(
+        upTo(depth)
+      )
     }
   }
 }
