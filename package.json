@@ -54,10 +54,10 @@
     "tap": "11.0.0"
   },
   "dependencies": {
-    "@unction/key": "4.12.0",
-    "@unction/keychain": "2.45.0",
-    "@unction/reducevalues": "2.44.0",
-    "@unction/upto": "3.8.0"
+    "@unction/key": "5.0.0",
+    "@unction/keychain": "3.0.0",
+    "@unction/reducevalues": "3.0.0",
+    "@unction/upto": "4.0.0"
   },
   "nyc": {
     "require": [
