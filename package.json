@@ -55,8 +55,8 @@
   },
   "dependencies": {
     "@unction/key": "8.0.0",
-    "@unction/keychain": "7.0.0",
-    "@unction/reducevalues": "6.0.0",
+    "@unction/keychain": "8.1.0",
+    "@unction/reducevalues": "7.0.0",
     "@unction/upto": "4.0.0"
   },
   "nyc": {
