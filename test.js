@@ -1,44 +1,40 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-magic-numbers */
-import {test} from "tap"
 import {indexBy} from "ramda"
 import {groupBy} from "ramda"
-import keyChain from "@unction/keychain"
-import key from "@unction/key"
+import dig from "@unction/dig"
+import get from "@unction/get"
 import mapValues from "@unction/mapvalues"
 
 import nestedApply from "./index"
 
-test(({similar, end}) => {
-  similar(
-    nestedApply(mapValues)((value) => `${value}`)(0)([1]),
+test("works", () => {
+  expect(
+    nestedApply(mapValues)((value) => `${value}`)(0)([1])
+  ).toEqual(
     ["1"]
   )
-
-  end()
 })
 
 
-test(({similar, end}) => {
-  similar(
-    nestedApply(mapValues)((value) => `${value}`)(1)([[1]]),
+test("works", () => {
+  expect(
+    nestedApply(mapValues)((value) => `${value}`)(1)([[1]])
+  ).toEqual(
     [["1"]]
   )
-
-  end()
 })
 
-test(({similar, end}) => {
-  similar(
-    nestedApply(mapValues)((value) => `${value}`)(2)([[[1]]]),
+test("works", () => {
+  expect(
+    nestedApply(mapValues)((value) => `${value}`)(2)([[[1]]])
+  ).toEqual(
     [[["1"]]]
   )
-
-  end()
 })
 
-test(({similar, end}) => {
-  similar(
-    nestedApply(mapValues)(indexBy(key("id")))(0)(
+test("works", () => {
+  expect(
+    nestedApply(mapValues)(indexBy(get("id")))(0)(
       [
         [
           {
@@ -61,7 +57,8 @@ test(({similar, end}) => {
           },
         ],
       ]
-    ),
+    )
+  ).toEqual(
     [
       {
         a1: {
@@ -85,12 +82,10 @@ test(({similar, end}) => {
       },
     ]
   )
-
-  end()
 })
-test(({similar, end}) => {
-  similar(
-    nestedApply(mapValues)(groupBy(keyChain(["attributes", "version"])))(1)(
+test("works", () => {
+  expect(
+    nestedApply(mapValues)(groupBy(dig(["attributes", "version"])))(1)(
       {
         res: {
           accounts: [{
@@ -125,7 +120,8 @@ test(({similar, end}) => {
           }],
         },
       }
-    ),
+    )
+  ).toEqual(
     {
       res: {
         accounts: {
@@ -173,6 +169,4 @@ test(({similar, end}) => {
       },
     }
   )
-
-  end()
 })

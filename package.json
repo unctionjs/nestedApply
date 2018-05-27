@@ -28,6 +28,8 @@
     "watch": "chokidar './index.js' './test.js' --command 'npm run ci --silent'"
   },
   "devDependencies": {
+    "@unction/dig": "1.0.1",
+    "@unction/get": "1.0.0",
     "@unction/mapvalues": "3.31.0",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
@@ -53,17 +55,8 @@
     "ramda": "0.24.1"
   },
   "dependencies": {
-    "@unction/key": "8.0.0",
-    "@unction/keychain": "8.1.0",
     "@unction/reducevalues": "7.0.0",
     "@unction/upto": "4.0.0"
-  },
-  "nyc": {
-    "require": [
-      "babel-register"
-    ],
-    "sourceMap": false,
-    "instrument": false
   },
   "files": [
     "transpiled/index.js"
