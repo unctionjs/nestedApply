@@ -1,4 +1,4 @@
-/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-magic-numbers */
+/* eslint-disable no-magic-numbers */
 import {indexBy} from "ramda"
 import {groupBy} from "ramda"
 import dig from "@unction/dig"
