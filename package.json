@@ -17,7 +17,7 @@
   "homepage": "https://github.com/unctionjs/nestedApply#readme",
   "repository": "github:unctionjs/nestedApply",
   "bugs": "https://github.com/unctionjs/nestedApply/issues",
-  "main": "transpiled/main.js",
+  "main": "main.js",
   "scripts": {
     "prepublishOnly": "npm run build",
     "test": "NODE_ENV=test tap --100 './test.js'",
@@ -66,7 +66,7 @@
     "browser.js.map"
   ],
   "module": "index.js",
-  "browser": "transpiled/browser.js",
+  "browser": "browser.js",
   "nyc": {
     "require": [
       "@babel/register"
