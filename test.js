@@ -1,19 +1,19 @@
 /* eslint-disable no-magic-numbers */
-import {indexBy} from "ramda"
-import {groupBy} from "ramda"
-import dig from "@unction/dig"
-import get from "@unction/get"
-import mapValues from "@unction/mapvalues"
+import {indexBy} from "ramda";
+import {groupBy} from "ramda";
+import dig from "@unction/dig";
+import get from "@unction/get";
+import mapValues from "@unction/mapvalues";
 
-import nestedApply from "./index"
+import nestedApply from "./index";
 
 test("works", () => {
   expect(
     nestedApply(mapValues)((value) => `${value}`)(0)([1])
   ).toEqual(
     ["1"]
-  )
-})
+  );
+});
 
 
 test("works", () => {
@@ -21,16 +21,16 @@ test("works", () => {
     nestedApply(mapValues)((value) => `${value}`)(1)([[1]])
   ).toEqual(
     [["1"]]
-  )
-})
+  );
+});
 
 test("works", () => {
   expect(
     nestedApply(mapValues)((value) => `${value}`)(2)([[[1]]])
   ).toEqual(
     [[["1"]]]
-  )
-})
+  );
+});
 
 test("works", () => {
   expect(
@@ -81,8 +81,8 @@ test("works", () => {
         },
       },
     ]
-  )
-})
+  );
+});
 test("works", () => {
   expect(
     nestedApply(mapValues)(groupBy(dig(["attributes", "version"])))(1)(
@@ -168,5 +168,5 @@ test("works", () => {
         },
       },
     }
-  )
-})
+  );
+});
