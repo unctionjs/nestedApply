@@ -55,8 +55,8 @@
     "tap": "12.6.1"
   },
   "dependencies": {
-    "@unction/reducevalues": "8.5.0",
-    "@unction/upto": "5.2.0"
+    "@unction/reducevalues": "8.6.0",
+    "@unction/upto": "5.2.1"
   },
   "files": [
     "index.js",
