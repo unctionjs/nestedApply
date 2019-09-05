@@ -4,7 +4,11 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (MapFunctionType => FunctorType => FunctorType) => MapFunctionType => number => FunctorType => FunctorType
+> (MapperFunctionType<A, B> => EnumerableType<A> => EnumerableType<B>) =>
+>   MapperFunctionType<A, B> =>
+>     number =>
+>       EnumerableType<A> =>
+>         EnumerableType<A>
 
 Takes a function (the application) that takes function(s) (later referred to as
 the inner) and value(s) (`mapValues()`, `forEach()`, `selectValues()`), a function (the inner)

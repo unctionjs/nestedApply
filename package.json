@@ -61,7 +61,7 @@
     "@unction/upto": "5.2.1"
   },
   "files": [
-    "index.js",
+    "index.ts",
     "main.js",
     "main.js.map",
     "browser.js",
@@ -75,5 +75,6 @@
     ],
     "sourceMap": false,
     "instrument": false
-  }
+  },
+  "types": "types.d.ts"
 }
