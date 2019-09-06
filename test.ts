@@ -5,7 +5,7 @@ import dig from "@unction/dig";
 import get from "@unction/get";
 import mapValues from "@unction/mapvalues";
 
-import nestedApply from "./index.ts";
+import nestedApply from "./index";
 
 test("works", () => {
   expect(
