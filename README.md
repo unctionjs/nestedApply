@@ -4,11 +4,11 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (MapperFunctionType<A, B> => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<B> | Set<B> | RecordType<B, unknown> | string) =>
+> (MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B> | Set<B> | RecordType<B, unknown> | string) =>
 >   MapperFunctionType<A, B> =>
 >     number =>
->       Array<A> | Set<A> | RecordType<unknown, A> | string =>
->         Array<A> | Set<A> | RecordType<unknown, A> | string
+>       Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string =>
+>         Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string
 
 Takes a function (the application) that takes function(s) (later referred to as
 the inner) and value(s) (`mapValues()`, `forEach()`, `selectValues()`), a function (the inner)
