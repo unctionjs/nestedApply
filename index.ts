@@ -1,9 +1,8 @@
 import reduceValues from "@unction/reducevalues";
 import upTo from "@unction/upto";
 import {MapperFunctionType} from "./types";
-import {EnumerableType} from "./types";
 
-export default function nestedApply<A, B> (iterator: (a: MapperFunctionType<A, B>) => (b: EnumerableType<A>) => EnumerableType<B>) {
+export default function nestedApply<A, B> (iterator: (a: MapperFunctionType<A, B>) => (b: Array<A> | Set<A> | RecordType<unknown, A> | string) => Array<B> | Set<B> | RecordType<B, unknown> | string) {
   return function nestedApplyIterator (unction: MapperFunctionType<A, B>) {
     return function nestedApplyIteratorUnction (depth: number) {
       return reduceValues(
